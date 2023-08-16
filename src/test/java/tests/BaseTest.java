@@ -19,11 +19,11 @@ public abstract class BaseTest {
     PlatformSelectPage platformSelectPage;
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
@@ -32,9 +32,10 @@ public abstract class BaseTest {
         platformSelectPage = new PlatformSelectPage(driver);
 
     }
-    @AfterMethod(alwaysRun = true)
-    public void tearDown(){
-        driver.quit();
-    }
 }
+//    @AfterMethod(alwaysRun = true)
+//    public void tearDown(){
+//        driver.quit();
+//    }
+//}
 

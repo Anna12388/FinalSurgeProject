@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class LoginPage extends BasePage{
 
     public static final By SIGN_IN_TITLE = By.xpath("//h2[contains(text(), 'Sign In')]");
-    public static final By EMAIL_INPUT = By.name("email");
-    public static final By PASSWORD_INPUT = By.name("password");
-    public static final By SIGN_IN_BUTTON = By.xpath("//button[contains(text(), 'Sign In')]");
+    public static final By EMAIL_INPUT = By.xpath("//input[@name='email']");
+    public static final By PASSWORD_INPUT = By.xpath("//input[@name='password']");
+    public static final By SIGN_IN_BUTTON = By.xpath("//button[@type='submit' and contains(text(), 'Sign In')]");
     public static final By EMAIL_ERROR_MESSAGE = By.xpath("//div[@class='error' and contains(text(), 'Email is required')]");
     public static final By PASSWORD_ERROR_MESSAGE = By.xpath("//div[@class='error' and contains(text(), 'Password is required')]");
     public static final By ALERT_MESSAGE = By.xpath("//div[@class='notification__content']");
@@ -24,8 +24,8 @@ public class LoginPage extends BasePage{
         return this;
     }
     public LoginPage inputEmailAndPass(String email, String pass){
-        driver.findElement(EMAIL_INPUT).sendKeys();
-        driver.findElement(PASSWORD_INPUT).sendKeys();
+        driver.findElement(EMAIL_INPUT).sendKeys(email);
+        driver.findElement(PASSWORD_INPUT).sendKeys(pass);
         return this;
     }
     public LoginPage clickSignInButton(){
@@ -42,7 +42,7 @@ public class LoginPage extends BasePage{
         return driver.findElement(PASSWORD_ERROR_MESSAGE).getText();
     }
 
-//    public String getAlertText(){
+//    public String getAlertMessage(){
 //        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ALERT_MESSAGE))).getText();
 ////    }
     @Override

@@ -1,22 +1,20 @@
 
 package tests;
 import org.testng.annotations.Test;
+import pages.PlatformSelectPage;
 
 import static org.testng.Assert.assertTrue;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
     @Test
-    public void inputValidEmailAndPassword(){
-        loginPage.open();
-        loginPage.isPageOpen();
-        loginPage.inputEmailAndPass("ocysegw@mailto.plus","Ab202010");
-        loginPage.clickSignInButton();
+    public void inputValidEmailAndPassword() {
+        loginPage.open()
+                .inputEmailAndPass("ocysegw@mailto.plus", "Ab202010")
+                .clickSignInButton();
 
-        assertTrue(loginPage.isPageOpen());
-
+        assertTrue(platformSelectPage.isPageOpen());
     }
-
 }
 
 
