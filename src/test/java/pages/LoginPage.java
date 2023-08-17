@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,36 +20,35 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+    @Step("Открыть сайт")
     public LoginPage open() {
         driver.get(URL + "login");
         return this;
     }
 
+    @Step("Ввести email и пароль")
     public LoginPage inputEmailAndPass(String email, String pass) {
         driver.findElement(EMAIL_INPUT).sendKeys(email);
         driver.findElement(PASSWORD_INPUT).sendKeys(pass);
         return this;
     }
-
+    @Step("Нажать на кнопку Sign In")
     public LoginPage clickSignInButton() {
         driver.findElement(SIGN_IN_BUTTON).click();
         return new LoginPage(driver);
     }
-
+    @Step("Получить сообщение о том, что необходимо ввести email")
     public String getEmailErrorMessage() {
-
         return driver.findElement(EMAIL_ERROR_MESSAGE).getText();
     }
-
+    @Step("Получить сообщение о том, что необходимо ввести пароль")
     public String getPasswordErrorMessage() {
 
         return driver.findElement(PASSWORD_ERROR_MESSAGE).getText();
     }
-
+    @Step("Получить сообщение о том, что введены невалидные данные")
     public String getErrorMessage() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='notification__content']"))).getText();
-
-
     }
 
     @Override
