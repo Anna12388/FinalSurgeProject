@@ -48,7 +48,7 @@ public class LoginPage extends BasePage {
     }
     @Step("Получить сообщение о том, что введены невалидные данные")
     public String getErrorMessage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='notification__content']"))).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(ERROR_MESSAGE)).getText();
     }
 
     @Override
