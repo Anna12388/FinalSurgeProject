@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PlatformSelectPage extends BasePage{
     public static final By SELECT_PLATFORM_TITLE = By.xpath("//div[contains(text(), 'Select Platform')]");
-    public static final By CONTINUE_WITH_BETA_LINK = By.xpath("//div[@class='platform platform--highlighted py-5 px-6']//div[@class='action-tag action-link action-link--arrow']");
+    public static final By CONTINUE_WITH_BETA_LINK = By.xpath("//span[normalize-space(text()) = 'Continue with Beta']");
 
     public static final By MESSAGE_LOGGED_IN_SUCCESSFULLY = By.xpath("//div[@class='notification__content' and contains(text(), 'Logged in successfully')]");
     public static final By USER_INITIALS = By.xpath("//div[@class='authenticated-user__initials text-m-bold']");
@@ -34,6 +34,6 @@ public class PlatformSelectPage extends BasePage{
 
     @Override
     public boolean isPageOpen() {
-        return isExist(USER_INITIALS);
+        return isExist(CONTINUE_WITH_BETA_LINK);
     }
 }

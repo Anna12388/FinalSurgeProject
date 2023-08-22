@@ -15,8 +15,7 @@ public abstract class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        Duration timeout = Duration.ofSeconds(5);
-        wait = new WebDriverWait(driver, timeout);
+        wait = new WebDriverWait(driver, 10);
     }
 
     public abstract boolean isPageOpen();
