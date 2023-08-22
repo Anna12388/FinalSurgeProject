@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.PlatformSelectPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,19 +16,27 @@ public abstract class BaseTest {
     HomePage homePage;
     LoginPage loginPage;
     PlatformSelectPage platformSelectPage;
+    SignUpPage signUpPage;
+    AccountPage accountPage;
+
+    UserProfilePage userProfilePage;
+
     @Step("Настройка и открытие браузера")
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         platformSelectPage = new PlatformSelectPage(driver);
+        signUpPage = new SignUpPage(driver);
+        accountPage = new AccountPage(driver);
+        userProfilePage = new UserProfilePage(driver);
 
     }
 

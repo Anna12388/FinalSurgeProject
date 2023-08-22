@@ -33,12 +33,13 @@ public class LoginPage extends BasePage {
         return this;
     }
     @Step("Нажать на кнопку Sign In")
-    public LoginPage clickSignInButton() {
+    public PlatformSelectPage clickSignInButton() {
         driver.findElement(SIGN_IN_BUTTON).click();
-        return new LoginPage(driver);
+        return new PlatformSelectPage(driver);
     }
     @Step("Получить сообщение о том, что необходимо ввести email")
     public String getEmailErrorMessage() {
+
         return driver.findElement(EMAIL_ERROR_MESSAGE).getText();
     }
     @Step("Получить сообщение о том, что необходимо ввести пароль")

@@ -2,16 +2,24 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
-    public static final By SIGN_UP_BUTTON = By.xpath("//a[contains(text(), 'Sign Up')]");
+    public static final By TITLE_FOR_USERS = By.xpath("//p[@class='h4 mt-2 mt-md-4 mt-lg-7']");
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
+
+    public void open() {
+        driver.get(URL);
+
+    }
+
     @Override
     public boolean isPageOpen() {
-        return isExist(SIGN_UP_BUTTON);
+        return isExist(TITLE_FOR_USERS);
+
     }
 }

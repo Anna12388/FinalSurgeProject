@@ -5,6 +5,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
+
 public abstract class BasePage {
     WebDriver driver;
     WebDriverWait wait;
@@ -12,7 +15,8 @@ public abstract class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        Duration timeout = Duration.ofSeconds(5);
+        wait = new WebDriverWait(driver, timeout);
     }
 
     public abstract boolean isPageOpen();
