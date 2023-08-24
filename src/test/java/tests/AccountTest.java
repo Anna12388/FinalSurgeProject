@@ -17,9 +17,3 @@ public class AccountTest extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//div[contains(text(), 'Select Platform')]")).getText(),"Select Platform");
     }
 }
-
-
-
-//        platformSelectPage.open();
-//        platformSelectPage.selectPlatform();
-//

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccountPage extends BasePage{
 
-    public static final By VIEW_CALENDAR_BUTTON = By.xpath("//span[text()='View Calendar']");
+    public static final By VIEW_CALENDAR_BUTTON = By.xpath("//span[normalize-space()='View Calendar']");
     public AccountPage(WebDriver driver) {
         super(driver);
     }

@@ -19,8 +19,8 @@ public abstract class BaseTest {
     PlatformSelectPage platformSelectPage;
     SignUpPage signUpPage;
     AccountPage accountPage;
-
     UserProfilePage userProfilePage;
+    WorkoutCalendarPage workoutCalendarPage;
 
     @Step("Настройка и открытие браузера")
     @BeforeMethod
@@ -38,6 +38,7 @@ public abstract class BaseTest {
         signUpPage = new SignUpPage(driver);
         accountPage = new AccountPage(driver);
         userProfilePage = new UserProfilePage(driver);
+        workoutCalendarPage = new WorkoutCalendarPage(driver);
 
     }
 

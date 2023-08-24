@@ -3,14 +3,12 @@ package tests;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
-
 public class PlatformSelectTest extends BaseTest{
-
     @Test
-    public void checkPlatformSelectPageIsOpened(){
+    public void selectPlatformAndClick(){
         platformSelectPage.open()
-                .selectPlatform();
+                    .selectPlatformAndClick();
 
-        assertTrue(platformSelectPage.isPageOpen());
+        assertTrue(workoutCalendarPage.isPageOpen());
+        }
     }
-}
