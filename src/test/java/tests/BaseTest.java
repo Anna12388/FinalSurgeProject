@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public abstract class BaseTest {
@@ -29,7 +30,7 @@ public abstract class BaseTest {
         options.addArguments("--start-maximized");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
