@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -8,11 +9,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
+import utils.PropertyReader;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public abstract class BaseTest {
+    String email, password;
     WebDriver driver;
     HomePage homePage;
     LoginPage loginPage;
@@ -25,6 +28,11 @@ public abstract class BaseTest {
     @Step("Настройка и открытие браузера")
     @BeforeMethod
     public void setUp() {
+        Configuration.baseUrl = System.getenv().getOrDefault("FINALSURGE_URL", PropertyReader.getProperty("finalsurge.url"));
+        email = System.getenv().getOrDefault("FINALSURGE_EMAIL", PropertyReader.getProperty("finalsurge.email"));
+        password = System.getenv().getOrDefault("FINALSURGE_PASSWORD", PropertyReader.getProperty("finalsurge.password"));
+
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");

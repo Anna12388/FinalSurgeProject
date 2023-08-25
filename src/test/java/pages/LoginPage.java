@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage {
 
+
     public static final By SIGN_IN_TITLE = By.xpath("//h2[contains(text(), 'Sign In')]");
     public static final By EMAIL_INPUT = By.xpath("//input[@name='email']");
     public static final By PASSWORD_INPUT = By.xpath("//input[@name='password']");
