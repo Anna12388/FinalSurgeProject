@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Ввести валидные данные пользователя")
     public void inputValidEmailAndPassword() {
         loginPage.open()
-                .inputEmailAndPass("ocysegw@mailto.plus", "Ab202010")
+                .inputEmailAndPass(email, password)
                 .clickSignInButton();
 
         assertTrue(platformSelectPage.isPageOpen());

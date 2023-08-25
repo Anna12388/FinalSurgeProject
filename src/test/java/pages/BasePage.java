@@ -7,11 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
+
 
 public abstract class BasePage {
     WebDriver driver;
     WebDriverWait wait;
-    final String URL = "https://www.finalsurge.com/";
+    final String URL = baseUrl;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
