@@ -27,7 +27,7 @@ public abstract class BaseTest {
     AccountPage accountPage;
     UserProfilePage userProfilePage;
     WorkoutCalendarPage workoutCalendarPage;
-@Parameters({""})
+@Parameters({"browser"})
     @Step("Настройка и открытие браузера")
     @BeforeMethod
     public void setUp(@Optional("chrome") String browser) {

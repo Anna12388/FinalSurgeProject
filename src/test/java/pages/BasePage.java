@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 public abstract class BasePage {
     WebDriver driver;
     WebDriverWait wait;
-    final String URL = baseUrl;
+    final String URL = "https://www.finalsurge.com/";
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
