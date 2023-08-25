@@ -3,14 +3,15 @@
 <suite name="Regression Test" parallel="tests" thread-count="2">
 
     <test name="Запуск в Хроме">
-        <parameter name="browser" value="chrome">
+        <parameter name="browser" value="chrome"></parameter>
+
         <classes>
             <class name="tests.HomeTest" />
         </classes>
     </test> <!-- Test -->
 
     <test name="Запуск в Эдже">
-        <parameter name="browser" value="edge">
+        <parameter name="browser" value="edge"></parameter>
         <classes>
             <class name="tests.HomeTest" />
         </classes>

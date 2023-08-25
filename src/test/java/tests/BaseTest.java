@@ -43,6 +43,7 @@ public abstract class BaseTest {
     } else{
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
+        driver.manage().window().maximize();
 
     }
         Configuration.baseUrl = System.getenv().getOrDefault("FINALSURGE_URL", PropertyReader.getProperty("finalsurge.url"));
