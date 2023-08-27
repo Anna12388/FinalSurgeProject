@@ -5,7 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 public class HomeTest extends BaseTest{
     @Test
-    public void checkHomePageIsOpened(){
+    public void checkIfHomePageIsOpen(){
         homePage.open();
 
         assertTrue(homePage.isPageOpen(),"Home page is not open");

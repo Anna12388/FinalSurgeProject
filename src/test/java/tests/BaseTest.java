@@ -15,7 +15,7 @@ import pages.*;
 import utils.PropertyReader;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+
 
 public abstract class BaseTest {
     String email, password;
@@ -23,10 +23,10 @@ public abstract class BaseTest {
     HomePage homePage;
     LoginPage loginPage;
     PlatformSelectPage platformSelectPage;
-    SignUpPage signUpPage;
-    AccountPage accountPage;
     UserProfilePage userProfilePage;
     WorkoutCalendarPage workoutCalendarPage;
+    WorkoutAddPage workoutAddPage;
+
 @Parameters({"browser"})
     @Step("Настройка и открытие браузера")
     @BeforeMethod
@@ -38,7 +38,8 @@ public abstract class BaseTest {
         options.addArguments("--start-maximized");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
 
     } else{
         WebDriverManager.edgedriver().setup();
@@ -53,10 +54,15 @@ public abstract class BaseTest {
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         platformSelectPage = new PlatformSelectPage(driver);
-        signUpPage = new SignUpPage(driver);
-        accountPage = new AccountPage(driver);
         userProfilePage = new UserProfilePage(driver);
         workoutCalendarPage = new WorkoutCalendarPage(driver);
+        workoutAddPage = new WorkoutAddPage(driver);
+
+
+
+
+
+
     }
 
     @Step("Закрытие браузера")

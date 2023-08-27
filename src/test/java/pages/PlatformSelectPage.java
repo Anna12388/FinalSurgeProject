@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,11 +14,12 @@ public class PlatformSelectPage extends BasePage{
     public PlatformSelectPage(WebDriver driver) {
         super(driver);
     }
-
+    @Step("Открыть страницу Platform select page")
     public PlatformSelectPage open(){
         driver.get(URL + "platform-select");
         return this;
     }
+    @Step("Выбрать первую платформу")
     public WorkoutCalendarPage selectPlatformAndClick(){
         driver.findElement(CONTINUE_WITH_BETA_LINK).click();
         return new WorkoutCalendarPage(driver);

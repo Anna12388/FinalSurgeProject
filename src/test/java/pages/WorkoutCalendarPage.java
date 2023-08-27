@@ -2,22 +2,33 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-public  class WorkoutCalendarPage extends BasePage{
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public  class WorkoutCalendarPage extends BasePage {
     public static final By DATE_TODAY = By.id("fs-date-today");
-    public static final By CROSS_TO_ADD_WORKOUT = By.xpath("//div[@class='fs-calendar-week-day-view active-month current-day']//div[@class='fs-quick-add-workout']");
+    public static final By PROFILE_ICON = By.xpath("//span[@class='profile-icon-md']");
+    public static final By MY_PROFILE = By.xpath("//span[normalize-space()='My Profile']");
 
     public WorkoutCalendarPage(WebDriver driver) {
         super(driver);
     }
-    public void open(){
-        driver.get(URL +"workoutcalendar");
+
+    public WorkoutCalendarPage open() {
+        driver.get(URL + "workoutcalendar");
+        return this;
     }
 
-    public void addWorkout() {
-        driver.findElement(DATE_TODAY).click();
-        driver.findElement(CROSS_TO_ADD_WORKOUT).click();
-
+    public WorkoutCalendarPage clickProfileIcon() {
+        driver.findElement(PROFILE_ICON).click();
+        return this;
     }
+
+    public WorkoutCalendarPage selectMyProfileFromDropdown() {
+        driver.findElement(MY_PROFILE).click();
+        return new WorkoutCalendarPage(driver);
+    }
+
     @Override
     public boolean isPageOpen() {
         return isExist(DATE_TODAY);

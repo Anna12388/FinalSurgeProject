@@ -1,7 +1,10 @@
 
 package tests;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import java.time.Duration;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -10,7 +13,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Ввести валидные данные пользователя")
     public void inputValidEmailAndPassword() {
         loginPage.open()
-                .inputEmailAndPass(email, password)
+                .inputEmailAndPass("ocysegw@mailto.plus", "Ab202010")
                 .clickSignInButton();
 
         assertTrue(platformSelectPage.isPageOpen());
@@ -20,6 +23,9 @@ public class LoginTest extends BaseTest {
         loginPage.open()
                 .inputEmailAndPass("ysegw@mailto.plus","Ab202010")
                 .clickSignInButton();
+
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='notification__content']")));
 
         assertEquals(loginPage.getErrorMessage(),"Invalid login credentials. Please try again.","Текст сообщения неверный или отсутствует");
     }

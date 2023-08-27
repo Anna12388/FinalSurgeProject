@@ -18,10 +18,11 @@ public class LoginPage extends BasePage {
 
 
     public LoginPage(WebDriver driver) {
+
         super(driver);
     }
 
-    @Step("Открыть сайт")
+    @Step("Открыть страницу login page")
     public LoginPage open() {
         driver.get(URL + "login");
         return this;
@@ -50,7 +51,7 @@ public class LoginPage extends BasePage {
     }
     @Step("Получить сообщение о том, что введены невалидные данные")
     public String getErrorMessage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(ERROR_MESSAGE)).getText();
+        return driver.findElement(ERROR_MESSAGE).getText();
     }
 
     @Override
