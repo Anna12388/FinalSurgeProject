@@ -14,8 +14,6 @@ public class WorkoutAddPage extends BasePage{
         return this;
     }
 
-
-
     @Override
     public boolean isPageOpen() {
         return isExist(SELECT_AN_ACTIVITY_TYPE_TITLE);
