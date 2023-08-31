@@ -8,7 +8,7 @@ public class HomeTest extends BaseTest{
     public void checkIfHomePageIsOpen(){
         homePage.open();
 
-        assertTrue(homePage.isPageOpen(),"Home page is not open");
+        assertTrue(homePage.isPageOpen(),"Страница не открылась");
 
     }
 

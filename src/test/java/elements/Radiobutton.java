@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Radiobutton {
 
-    String radioButtonInUserProfileForm = "//div/label/input[@id='%s']";
+    String radioButtonLocator = "//div/label/input[@id='%s']";
 
     WebDriver driver;
     String label;
@@ -15,7 +15,8 @@ public class Radiobutton {
         this.label = label;
     }
 
-    public void clickOnRadioButton(String gender){
-        driver.findElement(By.xpath(String.format(radioButtonInUserProfileForm,this.label))).click();
+    public void selectRadioButton(String gender){
+        driver.findElement(By.xpath(String.format(radioButtonLocator,this.label))).click();
     }
+
 }

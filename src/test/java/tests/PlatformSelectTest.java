@@ -12,6 +12,6 @@ public class PlatformSelectTest extends BaseTest{
         platformSelectPage.open()
                     .selectPlatformAndClick();
 
-        assertTrue(workoutCalendarPage.isPageOpen());
+        assertTrue(workoutCalendarPage.isPageOpen(),"Страница не открылась");
         }
     }

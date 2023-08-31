@@ -4,18 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Input {
-    String inputLocator = "//input[@id='%s']";
     WebDriver driver;
-    String label;
+    String inputId = "//input[@id='%s']";
+    String id;
 
-    public Input(WebDriver driver, String label) {
+    public Input(WebDriver driver, String id) {
         this.driver = driver;
-        this.label = label;
+        this.id = id;
     }
 
-    public void write(String text){
-        driver.findElement(By.xpath(String.format(inputLocator, this.label))).clear();
-        driver.findElement(By.xpath(String.format(inputLocator, this.label))).sendKeys(text);
+    public void clearAndType(String text) {
+        driver.findElement(By.id(String.format(inputId, this.id))).clear();
+        driver.findElement(By.id(String.format(inputId, this.id))).sendKeys();
+    }
 
+    public void write(String text) {
+        driver.findElement(By.id(String.format(inputId, this.id))).sendKeys(text);
     }
 }

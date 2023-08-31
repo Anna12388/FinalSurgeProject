@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Dropdown {
 
-    String dropDownLocatorInEditUserProfile = "//select[@id='%s']";
+    String dropDownLocator = "//select[@id='%s']";
 
     String optionLocator = "//*[@id='%s']/option";
 
@@ -18,7 +18,7 @@ public class Dropdown {
     }
 
     public void selectDropdown(String option) {
-        driver.findElement(By.xpath(String.format(dropDownLocatorInEditUserProfile, this.label))).click();
+        driver.findElement(By.xpath(String.format(dropDownLocator, this.label))).click();
         driver.findElement(By.xpath(String.format(optionLocator, option))).click();
 
     }

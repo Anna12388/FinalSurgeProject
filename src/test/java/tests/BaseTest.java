@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -18,14 +17,15 @@ import java.time.Duration;
 
 
 public abstract class BaseTest {
-    String email, password;
+    String email, password, url;
     WebDriver driver;
     HomePage homePage;
     LoginPage loginPage;
     PlatformSelectPage platformSelectPage;
     UserProfilePage userProfilePage;
+    UserModalProfilePage userModalProfilePage;
     WorkoutCalendarPage workoutCalendarPage;
-    WorkoutAddPage workoutAddPage;
+
 
 @Parameters({"browser"})
     @Step("Настройка и открытие браузера")
@@ -47,7 +47,7 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
 
     }
-        Configuration.baseUrl = System.getenv().getOrDefault("FINALSURGE_URL", PropertyReader.getProperty("finalsurge.url"));
+        url = System.getenv().getOrDefault("FINALSURGE_URL", PropertyReader.getProperty("finalsurge.url"));
         email = System.getenv().getOrDefault("FINALSURGE_EMAIL", PropertyReader.getProperty("finalsurge.email"));
         password = System.getenv().getOrDefault("FINALSURGE_PASSWORD", PropertyReader.getProperty("finalsurge.password"));
 
@@ -55,11 +55,8 @@ public abstract class BaseTest {
         loginPage = new LoginPage(driver);
         platformSelectPage = new PlatformSelectPage(driver);
         userProfilePage = new UserProfilePage(driver);
+        userModalProfilePage = new UserModalProfilePage(driver);
         workoutCalendarPage = new WorkoutCalendarPage(driver);
-        workoutAddPage = new WorkoutAddPage(driver);
-
-
-
 
 
 
