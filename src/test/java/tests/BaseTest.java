@@ -25,6 +25,7 @@ public abstract class BaseTest {
     UserProfilePage userProfilePage;
     UserModalProfilePage userModalProfilePage;
     WorkoutCalendarPage workoutCalendarPage;
+    PictureUploadPage pictureUploadPage;
 
 
 @Parameters({"browser"})
@@ -57,6 +58,8 @@ public abstract class BaseTest {
         userProfilePage = new UserProfilePage(driver);
         userModalProfilePage = new UserModalProfilePage(driver);
         workoutCalendarPage = new WorkoutCalendarPage(driver);
+        pictureUploadPage = new PictureUploadPage(driver);
+
 
 
 

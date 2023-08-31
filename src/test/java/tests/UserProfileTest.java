@@ -21,9 +21,9 @@ public class UserProfileTest extends BaseTest {
         userProfilePage.open()
                 .clickEditProfileButton();
 
-//        UserProfile userProfile = UserProfileFactory.get();
-//
-//        userModalProfilePage.editUserProfile(userProfile);
+        UserProfile userProfile = UserProfileFactory.get();
+
+        userModalProfilePage.edit(userProfile);
 
         assertTrue(userProfilePage.isPageOpen(), "Страница не открылась");
 
