@@ -19,7 +19,6 @@ import java.time.Duration;
 public abstract class BaseTest {
     String email, password, url;
     WebDriver driver;
-    HomePage homePage;
     LoginPage loginPage;
     PlatformSelectPage platformSelectPage;
     UserProfilePage userProfilePage;
@@ -37,7 +36,7 @@ public abstract class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
@@ -52,7 +51,6 @@ public abstract class BaseTest {
         email = System.getenv().getOrDefault("FINALSURGE_EMAIL", PropertyReader.getProperty("finalsurge.email"));
         password = System.getenv().getOrDefault("FINALSURGE_PASSWORD", PropertyReader.getProperty("finalsurge.password"));
 
-        homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         platformSelectPage = new PlatformSelectPage(driver);
         userProfilePage = new UserProfilePage(driver);

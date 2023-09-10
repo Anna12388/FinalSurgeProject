@@ -1,24 +1,43 @@
 package elements;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+
+@Log4j2
+
 
 public class Input {
-    WebDriver driver;
-    String inputId = "//input[@id='%s']";
-    String id;
+    private final String inputLocator = "%s";
+    private final WebDriver driver;
+    private final String id;
 
-    public Input(WebDriver driver, String id) {
+    public Input(WebDriver driver, String label) {
         this.driver = driver;
-        this.id = id;
+        this.id = label;
     }
 
-    public void clearAndType(String text) {
-        driver.findElement(By.id(String.format(inputId, this.id))).clear();
-        driver.findElement(By.id(String.format(inputId, this.id))).sendKeys();
+    private By getInputLocator() {
+        return By.id(String.format(inputLocator, this.id));
+    }
+
+    private void clearInput() {
+        driver.findElement(getInputLocator()).clear();
+        log.info("Clear input with id: " + id);
     }
 
     public void write(String text) {
-        driver.findElement(By.id(String.format(inputId, this.id))).sendKeys(text);
+        clearInput();
+        driver.findElement(getInputLocator()).sendKeys(text);
+        log.info("Write into input with label: " + id + ", text: " + text);
+    }
+
+    public void inputBDay(String text) {
+        clearInput();
+        Actions action = new Actions(driver);
+        action.doubleClick(driver.findElement(getInputLocator())).perform();
+        driver.findElement(getInputLocator()).sendKeys(text);
+        log.info("Write into input BDay with label: " + id + ", text: " + text);
     }
 }

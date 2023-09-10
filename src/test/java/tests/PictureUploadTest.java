@@ -2,37 +2,30 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class PictureUploadTest extends BaseTest{
-    @Test
+    @Test(description = "Update Profile Picture")
     public void checkFileUpload(){
         loginPage.open()
-                .inputEmailAndPass("ocysegw@mailto.plus","Ab202010")
+                .inputEmailAndPass(email,password)
                 .clickSignInButton();
-        platformSelectPage.open()
-                .selectPlatformAndClick();
-        workoutCalendarPage.open()
-                .clickProfileIcon()
+        platformSelectPage.selectPlatformAndClick();
+        workoutCalendarPage.clickProfileIcon()
                 .selectMyProfileFromDropdown();
-        userProfilePage.open()
-                .clickEditProfileButton();
-        pictureUploadPage.clickChangeImageButton();
+        userProfilePage.clickEditProfileButton();
+        pictureUploadPage.uploadPicture();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='profilepic']")));
-
-        pictureUploadPage.uploadFile();
 
         WebElement profilePicture = driver.findElement(By.xpath("//img[@class='profile-picture']"));
         String srcAttribute = profilePicture.getAttribute("src");
+        String expectedSrc = "Delivery/ProfilePic.cshtml?K=1dca3bb0-cce7-4105-b533-c25fe5c2acdc&S=200";
 
-        Assert.assertNotNull(srcAttribute, "Изображение не загружено в профиль");
+        Assert.assertEquals(srcAttribute, expectedSrc, "Изображение не было загружено");
+
+
+
 
 
 

@@ -2,28 +2,26 @@ package tests;
 
 import models.UserProfile;
 import models.UserProfileFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;;
 
 public class UserProfileTest extends BaseTest {
 
-    @Test
+    @Test(description = "Open and edit User profile page")
     public void userProfileShouldBeEdited() {
         loginPage.open()
-                .inputEmailAndPass("ocysegw@mailto.plus", "Ab202010")
+                .inputEmailAndPass(email, password)
                 .clickSignInButton();
-        platformSelectPage.open()
-                .selectPlatformAndClick();
+        platformSelectPage.selectPlatformAndClick();
         workoutCalendarPage.open()
                 .clickProfileIcon()
                 .selectMyProfileFromDropdown();
-        userProfilePage.open()
-                .clickEditProfileButton();
+        userProfilePage.clickEditProfileButton();
 
         UserProfile userProfile = UserProfileFactory.get();
 
-        userModalProfilePage.edit(userProfile);
+        userModalProfilePage.editProfile(userProfile)
+                             .clickSaveButton();
 
         assertTrue(userProfilePage.isPageOpen(), "Страница не открылась");
 

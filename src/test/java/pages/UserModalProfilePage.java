@@ -1,43 +1,51 @@
 package pages;
 
-import elements.Calendar;
-import elements.Dropdown;
+import elements.DropDown;
 import elements.Input;
-import elements.Radiobutton;
+import elements.RadioButton;
+import io.qameta.allure.Step;
+import lombok.extern.log4j.Log4j2;
 import models.UserProfile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
+@Log4j2
+
 public class UserModalProfilePage extends BasePage{
 
-    public static final By WELCOME = By.xpath("//div[@class='user-info']");
+    public static final By CANCEL = By.xpath("//span[normalize-space()='Cancel']");
     public static final By SAVE_CHANGES_BUTTON = By.id("saveButtonProfile");
 
     public UserModalProfilePage(WebDriver driver) {
         super(driver);
     }
-    public UserModalProfilePage edit(UserProfile userProfile){
-        new Input(driver,"fname").clearAndType(userProfile.getFirstName());
-        new Input(driver,"lname").clearAndType(userProfile.getLastName());
-        new Radiobutton(driver,"Gender").selectRadioButton(userProfile.getGender());
-        new Calendar(driver).selectDate("January","10","2000");
+    @Step("Edit User Profile")
+    public UserModalProfilePage editProfile(UserProfile userProfile){
+        new Input(driver,"fname").write(userProfile.getFirstName());
+        new Input(driver,"lname").write(userProfile.getLastName());
+        new RadioButton(driver,"male").selectRadioButton();
+        new Input(driver, "BDay").inputBDay(userProfile.getBirthday());
         new Input(driver,"Weight").write(userProfile.getWeight());
-        new Radiobutton(driver,"Weight").selectRadioButton(userProfile.getWeightType());
-        new Dropdown(driver,"Country").selectDropdown(userProfile.getCountry());
-        new Dropdown(driver,"State").selectDropdown(userProfile.getState());
+        new RadioButton(driver,"optionsRadios4").selectRadioButton();
+        new DropDown(driver,"Country").selectDropdown(userProfile.getCountry());
+        new DropDown(driver,"Region").selectDropdown(userProfile.getState());
         new Input(driver,"City").write(userProfile.getCity());
         new Input(driver,"Zip").write(userProfile.getZipCode());
+
         return clickSaveButton();
     }
 
-    public UserModalProfilePage clickSaveButton(){
+    @Step("Save changes")
+    public UserModalProfilePage clickSaveButton() {
         driver.findElement(SAVE_CHANGES_BUTTON).click();
         return new UserModalProfilePage(driver);
-
     }
 
+    @Step("Find element to make sure that page is open")
     @Override
     public boolean isPageOpen() {
-        return isExist(WELCOME);
+        log.info("Find element"+CANCEL);
+        return isExist(CANCEL);
     }
 }

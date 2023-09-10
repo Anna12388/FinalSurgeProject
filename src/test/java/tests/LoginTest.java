@@ -10,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginTest extends BaseTest {
 
-    @Test(description = "Ввести валидные данные пользователя")
+    @Test(description = "Input valid user data")
     public void inputValidEmailAndPassword() {
         loginPage.open()
                 .inputEmailAndPass(email,password)
@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 
         assertTrue(platformSelectPage.isPageOpen());
     }
-    @Test(description = "Ввести невалидный email и валидный пароль")
+    @Test(description = "Input an invalid email and a valid password")
     public void inputInvalidEmailAndValidPassword(){
         loginPage.open()
                 .inputEmailAndPass("ysegw@mailto.plus","Ab202010")
@@ -29,7 +29,7 @@ public class LoginTest extends BaseTest {
 
         assertEquals(loginPage.getErrorMessage(),"Invalid login credentials. Please try again.","Текст сообщения неверный или отсутствует");
     }
-    @Test(description = "Оставить поле email незаполненным и ввести валидный пароль")
+    @Test(description = "Leave the email field blank and input a valid password")
     public void leaveEmailEmptyAndInputValidPassword(){
         loginPage.open()
                 .inputEmailAndPass("","Ab202010")
@@ -37,7 +37,7 @@ public class LoginTest extends BaseTest {
 
         assertEquals(loginPage.getEmailErrorMessage(),"Email is required","Текст сообщения неверный или отсутствует");
     }
-    @Test(description = "Ввести валидный email и оставить поле Password незаполненным ")
+    @Test(description = "Input a valid email and leave the password field blank")
     public void inputValidEmailAndLeavePasswordEmpty(){
         loginPage.open()
                 .inputEmailAndPass("ocysegw@mailto.plus","")
