@@ -25,9 +25,5 @@ public class PictureUploadTest extends BaseTest{
         Assert.assertEquals(srcAttribute, expectedSrc, "Изображение не было загружено");
 
 
-
-
-
-
     }
 }
