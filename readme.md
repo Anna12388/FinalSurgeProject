@@ -1,8 +1,10 @@
-#***FinalSurge***  [link](https://www.finalsurge.com/)
+***FinalSurge***  [link] (https://www.finalsurge.com/)
 
-###Project task: Validation of CRUD operations###
+Project task: Validation of CRUD operations
 
-####Applied technologies:####
+
+Applied technologies:
+
 * Java 11
 * Maven
 * Selenium
@@ -10,8 +12,9 @@
 * Allure
 * Listeners
 * Lombok
+---
 
-##*Checklist for *FinalSurge* project* 
+*Checklist for *FinalSurge* project* 
 
 ---
 
