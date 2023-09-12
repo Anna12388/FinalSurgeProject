@@ -7,11 +7,12 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import models.UserProfile;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 @Log4j2
-
 public class UserModalProfilePage extends BasePage{
 
     public static final By CANCEL = By.xpath("//span[normalize-space()='Cancel']");
@@ -36,9 +37,14 @@ public class UserModalProfilePage extends BasePage{
         return clickSaveButton();
     }
 
+    private void clickElementByJavascript(WebElement element, WebDriver driver) {
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
     @Step("Save changes")
     public UserModalProfilePage clickSaveButton() {
-        driver.findElement(SAVE_CHANGES_BUTTON).click();
+        WebElement saveButton = driver.findElement(SAVE_CHANGES_BUTTON);
+        clickElementByJavascript(saveButton, driver);
         return new UserModalProfilePage(driver);
     }
 

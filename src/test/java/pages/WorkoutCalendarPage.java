@@ -4,11 +4,15 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.time.Duration;
+
 @Log4j2
 
 public  class WorkoutCalendarPage extends BasePage {
     public static final By DATE_TODAY = By.id("fs-date-today");
-    public static final By PROFILE_ICON = By.xpath("//div[@class='profile-icon-source']");
+    public static final By PROFILE_ICON = By.xpath("//span[@class='profile-icon-md']");
     public static final By MY_PROFILE = By.xpath("//span[@class='menu-collapsed' and normalize-space()='My Profile']");
 
     public WorkoutCalendarPage(WebDriver driver) {
