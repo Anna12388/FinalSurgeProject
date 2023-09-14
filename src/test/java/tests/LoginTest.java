@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
+
 import java.time.Duration;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

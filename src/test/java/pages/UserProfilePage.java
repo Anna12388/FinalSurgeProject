@@ -13,10 +13,10 @@ public class UserProfilePage extends BasePage{
         super(driver);
     }
     @Step("Open edit profile")
-    public UserProfilePage clickEditProfileButton() {
+    public UserModalProfilePage clickEditProfileButton() {
         driver.findElement(EDIT_PROFILE_BUTTON).click();
         log.info("Click edit profile button:" + EDIT_PROFILE_BUTTON);
-        return new UserProfilePage(driver);
+        return new UserModalProfilePage(driver);
     }
 
     @Step("Find element to make sure that page is open")
