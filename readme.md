@@ -20,6 +20,8 @@ Project task: Validation of CRUD operations
 
 *Chain of invocation
 
+*Loadable Component
+
 ---
 
 
