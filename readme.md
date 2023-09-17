@@ -41,18 +41,19 @@ Project task: Validation of CRUD operations
 |                     | - Remove image;                                                                                            |
 | *Training Calendar* | - Edit and Add Workout;                                                                                    |
 
+
+
+
 finalsurge.url = https://www.finalsurge.com/
 
-<<<<<<< HEAD
 finalsurge.email = ocysegw@mailto.plus
-
-=======
-
-finalsurge.email = ocysegw@mailto.plus
-
-
 
 finalsurge.password = Ab202010
+
+
+
+
+
 
 
 

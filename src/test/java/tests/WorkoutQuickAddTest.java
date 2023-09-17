@@ -20,7 +20,7 @@ public class WorkoutQuickAddTest extends BaseTest {
 
         WorkoutQuickAdd workoutQuickAdd = WorkoutQuickAddFactory.getData();
 
-        workoutQuickAddPage.editWorkout(workoutQuickAddPage)
+        workoutQuickAddPage.editWorkout(workoutQuickAdd)
                 .clickAddWorkout();
 
         String date = workoutQuickAdd.getDate();

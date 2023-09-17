@@ -6,6 +6,7 @@ import elements.Input;
 import elements.TextArea;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
+import models.WorkoutQuickAdd;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,8 +22,8 @@ public class WorkoutQuickAddPage extends BasePage {
     }
 
     @Step("Edit Workout: {workoutQuickAdd}")
-    public WorkoutQuickAddPage editWorkout(WorkoutQuickAddPage workoutQuickAdd) {
-        new Input(driver, "WorkoutDate").write(workoutQuickAdd.getDate)
+    public WorkoutQuickAddPage editWorkout(WorkoutQuickAdd workoutQuickAdd) {
+        new Input(driver, "WorkoutDate").write(workoutQuickAdd.getDate());
         new DropDown(driver, "WorkoutTime").selectDropdown(workoutQuickAdd.getTime());
         new DropDown(driver, "ActivityType").selectDropdown(workoutQuickAdd.getActivityType());
         new Input(driver, "Name").write(workoutQuickAdd.getWorkoutName());

@@ -25,7 +25,7 @@ public class UserProfileTest extends BaseTest {
 
         userModalProfilePage.editProfile(userProfile);
 
-        assertTrue(userProfilePage.isPageOpen(), "Страница не открылась");
+        assertTrue(userProfilePage.isPageOpen(), "The page did not open");
     }
 
     @Test(description = "Update Profile Picture")
