@@ -20,6 +20,8 @@ Project task: Validation of CRUD operations
 
 *Chain of invocation
 
+*Loadable Component
+
 ---
 
 
@@ -29,23 +31,30 @@ Project task: Validation of CRUD operations
 
 |     **Module**      | **Tests**                                                                                                  |
 |:-------------------:|:-----------------------------------------------------------------------------------------------------------|
-|   *Authorization*   | - Input valid user data;                                                                                   
-|                     | - Input an invalid email and a valid password;                                                             
-|                     | - Leave the email field blank and input a valid password;                                                  
-|                     | - Input a valid email and leave the password field blank;                                                  
-|     *Platform*      | - Select Beta platform;                                                                                  
-|*User Profile Page*  | - Edit user information (first name, last name, gender,birthday, weight, country, region, city, zip code); 
-|                     | - Add a profile picture;                                                                                    
-|                     | - Remove image;             
-|*Training Calendar*  | - Edit and Add Workout;
-
-
+|   *Authorization*   | - Input valid user data;                                                                                   |
+|                     | - Input an invalid email and a valid password;                                                             |
+|                     | - Leave the email field blank and input a valid password;                                                  |
+|                     | - Input a valid email and leave the password field blank;                                                  |
+|     *Platform*      | - Select Beta platform;                                                                                    |
+| *User Profile Page* | - Edit user information (first name, last name, gender,birthday, weight, country, region, city, zip code); |
+|                     | - Add a profile picture;                                                                                   |
+|                     | - Remove image;                                                                                            |
+| *Training Calendar* | - Edit and Add Workout;                                                                                    |
 
 finalsurge.url = https://www.finalsurge.com/
 
+<<<<<<< HEAD
 finalsurge.email = ocysegw@mailto.plus
 
+=======
+
+finalsurge.email = ocysegw@mailto.plus
+
+
+
 finalsurge.password = Ab202010
+
+
 
 
 

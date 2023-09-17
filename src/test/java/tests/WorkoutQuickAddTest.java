@@ -10,7 +10,7 @@ public class WorkoutQuickAddTest extends BaseTest {
     @Test
     public void addQuickWorkout() {
         loginPage.open()
-                .inputEmailAndPass(email,password)
+                .inputEmailAndPass(email, password)
                 .clickSignInButton()
                 .selectPlatformAndClick()
                 .clickProfileIcon()
