@@ -17,7 +17,6 @@ public class UserProfileTest extends BaseTest {
                 .inputEmailAndPass(email, password)
                 .clickSignInButton()
                 .selectPlatformAndClick()
-                .open()
                 .clickProfileIcon()
                 .selectMyProfileFromDropdown()
                 .clickEditProfileButton();
@@ -65,8 +64,6 @@ public class UserProfileTest extends BaseTest {
         String expectedPlaceholderUrl = "https://log.finalsurge.com/img/default-profile60x60.png";
 
         Assert.assertEquals(srcAttribute, expectedPlaceholderUrl, "The photo was not deleted");
-
-
     }
 }
 

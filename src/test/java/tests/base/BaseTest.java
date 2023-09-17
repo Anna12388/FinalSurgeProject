@@ -10,7 +10,6 @@ import pages.*;
 import utils.PropertyReader;
 
 import java.time.Duration;
-
 @Listeners(TestListener.class)
 public class BaseTest {
     protected String email, password, url;
@@ -21,6 +20,8 @@ public class BaseTest {
     protected  UserModalProfilePage userModalProfilePage;
     protected WorkoutCalendarPage workoutCalendarPage;
     protected  PictureUploadPage pictureUploadPage;
+    protected TrainingCalendarPage trainingCalendarPage;
+    protected WorkoutQuickAddPage workoutQuickAddPage;
 
 
     @Parameters({"browser"})
@@ -42,9 +43,12 @@ public class BaseTest {
         driver.manage().window().maximize();
 
     }
-        url = System.getenv().getOrDefault("FINALSURGE_URL", PropertyReader.getProperty("finalsurge.url"));
-        email = System.getenv().getOrDefault("FINALSURGE_EMAIL", PropertyReader.getProperty("finalsurge.email"));
-        password = System.getenv().getOrDefault("FINALSURGE_PASSWORD", PropertyReader.getProperty("finalsurge.password"));
+        url = System.getenv().getOrDefault("FINALSURGE_URL",
+                PropertyReader.getProperty("finalsurge.url"));
+        email = System.getenv().getOrDefault("FINALSURGE_EMAIL",
+                PropertyReader.getProperty("finalsurge.email"));
+        password = System.getenv().getOrDefault("FINALSURGE_PASSWORD",
+                PropertyReader.getProperty("finalsurge.password"));
 
         loginPage = new LoginPage(driver);
         platformSelectPage = new PlatformSelectPage(driver);
@@ -52,10 +56,9 @@ public class BaseTest {
         userModalProfilePage = new UserModalProfilePage(driver);
         workoutCalendarPage = new WorkoutCalendarPage(driver);
         pictureUploadPage = new PictureUploadPage(driver);
-
-
+        trainingCalendarPage = new TrainingCalendarPage(driver);
+        workoutQuickAddPage = new WorkoutQuickAddPage(driver);
     }
-
     @AfterMethod(alwaysRun = true, description = "Closing the browser")
     public void tearDown(){
         driver.quit();

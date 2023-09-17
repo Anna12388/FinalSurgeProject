@@ -39,6 +39,7 @@ public  class WorkoutCalendarPage extends BasePage {
         log.info("Click My Profile:"+ MY_PROFILE);
         return new UserProfilePage(driver);
     }
+
     @Step("Find element to make sure that page is open")
     @Override
     public boolean isPageOpen() {
