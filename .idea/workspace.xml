@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8017883-8503-4bf9-aea7-410fc7d22c6a" name="Changes" comment="" />
+    <list default="true" id="e8017883-8503-4bf9-aea7-410fc7d22c6a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +45,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml">
+  <component name="RunManager" selected="TestNG.LoginTest">
     <configuration name="C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalSurgeProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/regression.xml" />
@@ -122,8 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" />
         <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" />
         <item itemvalue="TestNG.WorkoutQuickAddTest" />
         <item itemvalue="TestNG.UserProfileTest.userProfileShouldBeEdited" />
         <item itemvalue="TestNG.UserProfileTest" />
@@ -251,12 +256,18 @@
       <option name="project" value="LOCAL" />
       <updated>1695056837574</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="config">
+      <created>1695057073530</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1695057073530</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="userTest" />
-    <MESSAGE value="config" />
     <MESSAGE value="user photo" />
     <MESSAGE value="language" />
     <MESSAGE value="add delete image test" />
@@ -265,6 +276,7 @@
     <MESSAGE value="add test" />
     <MESSAGE value="git attributes" />
     <MESSAGE value="regression" />
-    <option name="LAST_COMMIT_MESSAGE" value="regression" />
+    <MESSAGE value="config" />
+    <option name="LAST_COMMIT_MESSAGE" value="config" />
   </component>
 </project>

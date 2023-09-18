@@ -10,7 +10,6 @@ import io.qameta.allure.Step;
 @Log4j2
 public class RadioButton {
     String radioButton = "%s";
-
     WebDriver driver;
     String id;
 
@@ -18,7 +17,6 @@ public class RadioButton {
         this.driver = driver;
         this.id = id;
     }
-
     @Step("Select radio button")
     public void selectRadioButton() {
         WebElement radioButtonElement = driver.findElement(By.id(String.format(radioButton, this.id)));

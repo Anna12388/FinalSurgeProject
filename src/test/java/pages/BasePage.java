@@ -4,14 +4,14 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.PropertyReader;
 import java.time.Duration;
-
 @Log4j2
-
 public abstract class BasePage {
     WebDriver driver;
     WebDriverWait wait;
-    final String URL = "https://www.finalsurge.com/";
+    final String URL =System.getenv().getOrDefault("FINALSURGE_URL",
+            PropertyReader.getProperty("finalsurge.url"));
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
