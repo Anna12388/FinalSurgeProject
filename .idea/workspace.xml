@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8017883-8503-4bf9-aea7-410fc7d22c6a" name="Changes" comment="" />
+    <list default="true" id="e8017883-8503-4bf9-aea7-410fc7d22c6a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +45,34 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.WorkoutQuickAddTest">
+  <component name="RunManager" selected="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml">
+    <configuration name="C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalSurgeProject" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalSurgeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalSurgeProject" />
       <extension name="coverage">
@@ -52,42 +84,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserProfileTest.checkFileUpload" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FinalSurgeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
-      <option name="METHOD_NAME" value="checkFileUpload" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserProfileTest.deleteImage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FinalSurgeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
-      <option name="METHOD_NAME" value="deleteImage" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -131,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" />
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.WorkoutQuickAddTest" />
         <item itemvalue="TestNG.UserProfileTest.userProfileShouldBeEdited" />
         <item itemvalue="TestNG.UserProfileTest" />
-        <item itemvalue="TestNG.UserProfileTest.deleteImage" />
-        <item itemvalue="TestNG.UserProfileTest.checkFileUpload" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695032775169</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="git attributes">
+      <created>1695033316410</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695033316410</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,6 +254,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="readme.md" />
     <MESSAGE value="add test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test" />
+    <MESSAGE value="git attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="git attributes" />
   </component>
 </project>
