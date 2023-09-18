@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e8017883-8503-4bf9-aea7-410fc7d22c6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrainingCalendarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrainingCalendarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WorkoutCalendarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WorkoutCalendarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.LoginTest">
+  <component name="RunManager" selected="TestNG.WorkoutQuickAddTest">
     <configuration name="C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalSurgeProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/regression.xml" />
@@ -73,24 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FinalSurgeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserProfileTest.userProfileShouldBeEdited" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserProfileTest.checkFileUpload" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalSurgeProject" />
       <extension name="coverage">
         <pattern>
@@ -100,7 +85,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
-      <option name="METHOD_NAME" value="userProfileShouldBeEdited" />
+      <option name="METHOD_NAME" value="checkFileUpload" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserProfileTest.deleteImage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalSurgeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UserProfileTest" />
+      <option name="METHOD_NAME" value="deleteImage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WorkoutQuickAddTest" />
+        <item itemvalue="TestNG.UserProfileTest.deleteImage" />
+        <item itemvalue="TestNG.UserProfileTest.checkFileUpload" />
         <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.C:/Users/incan/FinalSurgeProjectt1/src/test/resources/regression.xml" />
-        <item itemvalue="TestNG.WorkoutQuickAddTest" />
-        <item itemvalue="TestNG.UserProfileTest.userProfileShouldBeEdited" />
-        <item itemvalue="TestNG.UserProfileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695057073530</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="config">
+      <created>1695064352176</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1695064352176</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

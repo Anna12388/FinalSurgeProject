@@ -12,18 +12,15 @@ public abstract class BasePage {
     WebDriverWait wait;
     final String URL =System.getenv().getOrDefault("FINALSURGE_URL",
             PropertyReader.getProperty("finalsurge.url"));
-
     public BasePage(WebDriver driver) {
         this.driver = driver;
         Duration timeoutDuration = Duration.ofSeconds(20);
         WebDriverWait wait = new WebDriverWait(driver,timeoutDuration);
     }
-
     public void clickElementByJavascript(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-        log.info("Click on the item with a by Javascript");
+        log.info("Click on the element with JavaScript");
     }
-
     public abstract boolean isPageOpen();
     @Step("Find element to make sure that page is open")
     public boolean isExist(By locator) {

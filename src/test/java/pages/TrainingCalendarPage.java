@@ -20,7 +20,7 @@ public class TrainingCalendarPage extends BasePage{
     @Step("Click Quick Add button")
     public TrainingCalendarPage clickQuickAdd(){
         driver.findElement(QUICK_ADD_BUTTON).click();
-        log.info("Clicked Quick Add button");
+        log.info("Click Quick Add button");
         return new TrainingCalendarPage(driver);
     }
 
