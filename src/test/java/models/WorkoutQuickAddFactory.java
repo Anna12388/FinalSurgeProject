@@ -6,8 +6,8 @@ public class WorkoutQuickAddFactory {
     static Faker faker = new Faker();
     public static WorkoutQuickAdd getData(){
         return WorkoutQuickAdd.builder()
-                .date("20/10/2023")
-                .time("10:00 AM")
+                .date("09/23/2023")
+                .time("02:00 PM")
                 .activityType("Bike")
                 .workoutName(faker.artist().name())
                 .workoutDescription(faker.lorem().sentence())

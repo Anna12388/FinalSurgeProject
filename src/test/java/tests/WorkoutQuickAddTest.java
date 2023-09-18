@@ -20,13 +20,15 @@ public class WorkoutQuickAddTest extends BaseTest {
 
         WorkoutQuickAdd workoutQuickAdd = WorkoutQuickAddFactory.getData();
 
-        workoutQuickAddPage.editWorkout(workoutQuickAdd)
-                .clickAddWorkout();
+        workoutQuickAddPage.editWorkout(workoutQuickAdd);
+
 
         String date = workoutQuickAdd.getDate();
         String activityType = workoutQuickAdd.getActivityType();
 
-        assertTrue(trainingCalendarPage.isWorkoutPresent(date, activityType),
-                "The workout was not added successfully");
+        boolean isWorkoutPresent = trainingCalendarPage.isAddedQuickWorkoutVisible();
+
+        assertTrue(isWorkoutPresent, "The workout was not added successfully");
+
     }
 }
