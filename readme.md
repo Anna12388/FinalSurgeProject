@@ -1,10 +1,10 @@
-# _**Diploma project for # ***FinalSurge*** [link] (https://www.finalsurge.com/)**_
+# _**Diploma project for ***FinalSurge***  (https://www.finalsurge.com/)**_
 
 #### **_Testing of FinalSurge - a platform for crafting, organizing and monitoring workout routines._**
 
-## **_Project task: Validation of CRUD operations._**
+### **_Project task: Validation of CRUD operations._**
 
-***Applied technologies***:
+***Technologies***:
 
 * Java 11
 * Maven
@@ -15,7 +15,7 @@
 * Lombok
 ---
 
-***Applied design-patterns***:
+***Design-patterns***:
 
 *Page Object
 
