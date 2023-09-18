@@ -1,6 +1,6 @@
 # _**Diploma project for ***FinalSurge***  (https://www.finalsurge.com/)**_
 
-#### **_Testing of FinalSurge - a platform for crafting, organizing and monitoring workout routines._**
+#### **_Testing of FinalSurge - a platform for creating, organizing and monitoring workout routines._**
 
 ### **_Project task: Validation of CRUD operations._**
 
