@@ -4,7 +4,6 @@ import models.UserProfile;
 import models.UserProfileFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 import static org.testng.Assert.*;;
@@ -44,7 +43,7 @@ public class UserProfileTest extends BaseTest {
         String srcAttribute = profilePicture.getAttribute("src");
         String expectedBaseUrl = "https://log.finalsurge.com/Delivery/ProfilePic";
 
-        Assert.assertTrue(srcAttribute.startsWith(expectedBaseUrl), "The image was not uploaded");
+        assertTrue(srcAttribute.startsWith(expectedBaseUrl), "The image was not uploaded");
 
     }
     @Test(description = "Delete Profile Picture")
@@ -63,7 +62,7 @@ public class UserProfileTest extends BaseTest {
         String srcAttribute = profilePicture.getAttribute("src");
         String expectedPlaceholderUrl = "https://log.finalsurge.com/img/default-profile60x60.png";
 
-        Assert.assertEquals(srcAttribute, expectedPlaceholderUrl, "The photo was not deleted");
+        assertEquals(srcAttribute, expectedPlaceholderUrl, "The photo was not deleted");
     }
 }
 

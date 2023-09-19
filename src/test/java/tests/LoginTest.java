@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Input an invalid email and a valid password")
     public void inputInvalidEmailAndValidPassword(){
         loginPage.open()
-                .inputEmailAndPass("ysegw@mailto.plus","Ab202010")
+                .inputEmailAndPass("ysegw@mailto.plus",password)
                 .clickSignInButton();
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Leave the email field blank and input a valid password")
     public void leaveEmailEmptyAndInputValidPassword(){
         loginPage.open()
-                .inputEmailAndPass("","Ab202010")
+                .inputEmailAndPass("",password)
                 .clickSignInButton();
 
         assertEquals(loginPage.getEmailErrorMessage(),"Email is required","Текст сообщения неверный или отсутствует");
@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Input a valid email and leave the password field blank")
     public void inputValidEmailAndLeavePasswordEmpty(){
         loginPage.open()
-                .inputEmailAndPass("ocysegw@mailto.plus","")
+                .inputEmailAndPass(email,"")
                 .clickSignInButton();
 
         assertEquals(loginPage.getPasswordErrorMessage(),"Password is required","Текст сообщения неверный или отсутствует");

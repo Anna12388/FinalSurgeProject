@@ -13,7 +13,7 @@ import java.time.Duration;
 @Log4j2
 @Listeners(TestListener.class)
 public class BaseTest {
-    protected String email, password, url;
+    protected String email, password,url;
     protected  WebDriver driver;
     protected LoginPage loginPage;
     protected PlatformSelectPage platformSelectPage;
